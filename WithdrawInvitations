@@ -1,0 +1,14 @@
+                var i = 1;                     //  set your counter to 1
+
+function myLoop () {           //  create a loop function
+   setTimeout(function () {    
+      i++;                     //  increment the counter
+      if (i < 50) {            //  if the counter < 10, call the loop function
+         myLoop();             //  ..  again which will trigger another
+         $('.button-tertiary-medium-muted').click();
+         console.log(i);
+      }                        //  ..  setTimeout()
+   }, 4000)
+}
+
+myLoop();
